@@ -1,5 +1,6 @@
 // backroud password by cuong is me
- body, html {
+<style>
+            body, html {
             height: 100%;
             margin: 0;
             display: flex;
@@ -55,7 +56,7 @@
             background-color: #e94560;
             text-decoration: none;
             border-radius: 5px;
-            transition: 0.3s ease;
+            transition: background-color 0.3s ease;
             text-align: center;
             cursor: pointer;
             }
@@ -63,3 +64,5 @@
             .button-link:hover {
                 background-color: #ba2f2f;
             }
+        </style>
+
