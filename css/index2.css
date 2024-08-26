@@ -1,6 +1,6 @@
 // backroud password by cuong is me
 
-   body, html {
+        body, html {
             height: 100%;
             margin: 0;
             display: flex;
@@ -38,7 +38,7 @@
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
-                transition: background-color 0.3s ease;
+                transition: 0.3s ease;
             }
 
             #passwordPrompt button:hover {
