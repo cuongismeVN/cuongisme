@@ -207,23 +207,19 @@
 
 
 
-	function so90() { // ăng teng vai
-		h5gg.clearResults();
-		h5gg.searchNumber('4575657222469899220', 'I64', '0x100000000', '0x160000000');
-		h5gg.editAll('4848124999925814228', 'I64');
-		h5gg.clearResults();
-		h5gg.searchNumber('4575657222469336965', 'I64', '0x100000000', '0x160000000');
-		h5gg.editAll('4848124999925251973', 'I64');
-		h5gg.clearResults();
-		h5gg.searchNumber('4575657224610966592', 'I64', '0x100000000', '0x160000000');
-		h5gg.editAll('4848125002066881600', 'I64');
-		({
-			type: 'success',
-			message: '肩膀天線'
-		});
-
-
-	}
+       function so90() { // ăng teng vai
+	       
+       h5gg.clearResults();
+       h5gg.searchNumber('4575657222469899220', 'I64', '0x100000000', '0x160000000');
+       h5gg.editAll('4848124999925814228', 'I64');
+       h5gg.clearResults();
+       h5gg.searchNumber('4575657222469336965', 'I64', '0x100000000', '0x160000000');
+       h5gg.editAll('4848124999925251973', 'I64');
+       ({
+        type: 'success',
+        message: '肩膀天線'
+       });
+       }
 
 
 
@@ -389,4 +385,45 @@
 		});
 	}
 	
-   
+
+
+// Menu Gia Long 
+
+function long3() { // magic
+		h5gg.clearResults();
+		h5gg.searchNumber('4333543704410193920', 'I64', '0x100000000', '0x160000000');
+		h5gg.searchNearby('0.01', 'F32', '0x8');
+		h5gg.searchNearby('0.0219~0.02975', 'F32', '0x32')
+		h5gg.searchNearby('0.1035~0.1070', 'F32', '0x4');
+		h5gg.searchNearby('2.802597e-45', 'F32', '0x4');
+		h5gg.searchNumber('0.1035~0.1070', 'F32', '0x100000000', '0x160000000');
+		h5gg.editAll('1.875', "F32");
+		({
+			type: 'success',
+			message: '人物範圍'
+		});
+	}
+
+
+	function long1() { // speed x2
+		h5gg.editAll('4397530849758414897', 'I64');
+		({
+			type: 'success',
+			message: '2x'
+		});  
+	}
+
+
+  function long2() { // ăng teng vai
+	       
+       h5gg.clearResults();
+       h5gg.searchNumber('4575657222469899220', 'I64', '0x100000000', '0x160000000');
+       h5gg.editAll('4848124999925814228', 'I64');
+       h5gg.clearResults();
+       h5gg.searchNumber('4575657222469336965', 'I64', '0x100000000', '0x160000000');
+       h5gg.editAll('4848124999925251973', 'I64');
+       ({
+        type: 'success',
+        message: '肩膀天線'
+       });
+       }
