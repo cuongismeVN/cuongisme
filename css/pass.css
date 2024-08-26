@@ -62,3 +62,24 @@
             .button-link:hover {
                 background-color: #ba2f2f;
             }
+        </style>
+
+    </header>
+
+    <body>
+        <div id="passwordPrompt">
+            <label for="">Nhập Pass</label>
+            <input type="password" id="password">
+            <button onclick="checkPassword()">Xác nhận</button>
+            <a href="https://www.facebook.com/congtaosea" class="button-link">Liên hệ Admin để lấy pass</a>
+        </div>
+        <script>
+            function checkPassword() {
+                var password = document.getElementById('password').value;
+                if (password === "123") { // Thay "your_password" bằng mật khẩu thực tế
+                    document.getElementById('passwordPrompt').style.display = 'none';
+                    document.getElementById('app').style.display = 'block';
+                } else {
+                    alert('Mật khẩu không đúng');
+                }
+            }
