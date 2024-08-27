@@ -465,12 +465,87 @@ function long2() { // ăng teng tay
        });
        }
 
+function c2() { // magic
+		h5gg.clearResults();
+		h5gg.searchNumber('4333543704410193920', 'I64', '0x100000000', '0x160000000');
+		h5gg.searchNearby('0.01', 'F32', '0x8');
+		h5gg.searchNearby('0.0219~0.02975', 'F32', '0x32')
+		h5gg.searchNearby('0.1035~0.1070', 'F32', '0x4');
+		h5gg.searchNearby('2.802597e-45', 'F32', '0x4');
+		h5gg.searchNumber('0.1035~0.1070', 'F32', '0x100000000', '0x160000000');
+		h5gg.editAll('1.875', "F32");
+		({
+			type: 'success',
+			message: '人物範圍'
+		});
+	}
+
+
+	function c3() { // speed x50
+		h5gg.editAll('4397530849741637681', 'I64');
+                ({
+               type: 'success',
+             message: '50x'
+        });
+
+     }
+
+function c4() { // tâm awm 
+    h5gg.clearResults();
+    h5gg.searchNumber('4603687625386098688', 'I64', '0x100000000', '0x160000000');
+    var count = h5gg.getResultsCount();
+    var r = h5gg.getResults(count);
+    var cnt = 0;
+    for (var i = 0; i < count; i++) {
+        var addr1 = r[i].address;
+
+        var dizhi0 = (Number(addr1) + 36);
+        var dizhi1 = (Number(addr1) + 40);
+        var dizhi2 = (Number(addr1) + -308);
 
 
 
+        {
+            h5gg.setValue(dizhi0, 0.01, "F32");
+            h5gg.setValue(dizhi1, 0.01, "F32");
+            h5gg.setValue(dizhi2, 0, "I32");
+
+        }
+    }
+     ({
+        type: 'success',
+        message: 'AWM快切準心'
+    });
+
+
+}
 
 
 
+function c5() { // aim awm
+h5gg.clearResults();
+h5gg.searchNumber('31101603021', 'I64', '0x100000000', '0x160000000');
+var count = h5gg.getResultsCount();
+var r = h5gg.getResults(count);
+var cnt = 0;
+for(var i=0; i<count; i++) {
+    var addr1 = r[i].address;
+
+var dizhi0 = (Number(addr1) + 8);
+
+   
+
+
+{
+h5gg.setValue(dizhi0, 2139095040, "I32");
+
+   }
+}
+({
+        type: 'success',
+        message: 'AWM自瞄'
+    });
+}
 
 
 
