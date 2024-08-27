@@ -625,7 +625,7 @@ h5gg.setValue(dizhi0, 2139095040, "I32");
 
 
 
-function c4() {
+function c6() {
 		modifyValue7(
 			60, // Giá trị tìm kiếm ban đầu là 60
 			Number(prompt("Nhập Tầm Xa Bắt Đầu Từ 60-> ... :", "")), // Giá trị thay thế do người dùng nhập vào
