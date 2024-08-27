@@ -447,6 +447,81 @@ function long2() { // ăng teng tay
 }
 
 
+function long() {  // cam zomzom
+		modifyValue7(
+			60, // Giá trị tìm kiếm ban đầu là 60
+			Number(prompt("Nhập Tầm Xa Bắt Đầu Từ 60-> ... :", "")), // Giá trị thay thế do người dùng nhập vào
+			'68', // Phần cuối của địa chỉ bộ nhớ cần khớp
+			null, // Không cần địa chỉ kết thúc thứ hai
+			"Giá Trị Đã Được Thay Đổi Và Khóa." // Thông báo khi thay đổi thành công và khóa giá trị
+		);
+	}
+
+	function modifyValue7(searchValue, replaceValue, addressEndsWith, addressEndsWith2, alertMessage) {
+		h5gg.clearResults();
+		h5gg.searchNumber(searchValue, 'F32', '0x100000000', '0x160000000');
+		const results = h5gg.getResults(h5gg.getResultsCount());
+		let modifiedCount = 0;
+
+		// Tạo một danh sách để lưu trữ các địa chỉ cần khóa
+		const lockAddresses = [];
+
+		results.forEach(result => {
+			if (result.address.endsWith(addressEndsWith) || (addressEndsWith2 && result.address.endsWith(addressEndsWith2))) {
+				h5gg.setValue(result.address, replaceValue.toString(), 'F32');
+				modifiedCount++;
+				lockAddresses.push(result.address); // Lưu địa chỉ cần khóa
+			}
+		});
+
+		if (modifiedCount > 0 && alertMessage) {
+			alert(alertMessage);
+
+			// Khóa giá trị sau khi thay đổi
+			const locker = setInterval(function () {
+				console.log("Kiểm Tra Và Khóa Giá Trị...");
+				lockAddresses.forEach(address => {
+					const currentValue = h5gg.getValue(address, 'F32');
+					if (currentValue !== replaceValue) { // Chỉ cập nhật nếu giá trị đã thay đổi
+						h5gg.setValue(address, replaceValue.toString(), 'F32');
+					}
+				});
+			}, 2000); // Kiểm tra và cập nhật mỗi 2 giây (giảm tần suất lặp)
+
+			// Hủy bỏ khóa: clearInterval(locker); có thể gọi khi cần thiết
+		} else if (alertMessage) {
+			alert("Không Tìm Thấy Kết Quả Phù Hợp Để Thay Đổi.");
+		}
+	}
+
+
+function long4() { // hs cu 
+        function searchAndReplace(searchValue, replaceValue, type) {
+        h5gg.clearResults(); h5gg.searchNumber(searchValue, type, '0x100000000', '0x200000000'); var results = h5gg.getResults(h5gg.getResultsCount()); for (var i = 0; i < results.length; i++) {
+        h5gg.setValue(results[i].address, replaceValue.toString(), type)}}
+        searchAndReplace(2018908708, 96688289, 'I32')}
+        function AimCopev2() {
+        function searchAndReplace(searchValue,
+        replaceValue,
+        type) {
+        h5gg.clearResults(); h5gg.searchNumber(searchValue,
+        type,
+        '0x100000000',
+        '0x160000000'); var results = h5gg.getResults(h5gg.getResultsCount()); for (var i = 0; i < results.length; i++) {
+        h5gg.setValue(results[i].address, replaceValue.toString(), type)}}
+        searchAndReplace(1075000115, -5, 'F32')}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // menu quân hà 
@@ -550,7 +625,52 @@ h5gg.setValue(dizhi0, 2139095040, "I32");
 
 
 
+function c4() {
+		modifyValue7(
+			60, // Giá trị tìm kiếm ban đầu là 60
+			Number(prompt("Nhập Tầm Xa Bắt Đầu Từ 60-> ... :", "")), // Giá trị thay thế do người dùng nhập vào
+			'68', // Phần cuối của địa chỉ bộ nhớ cần khớp
+			null, // Không cần địa chỉ kết thúc thứ hai
+			"Giá Trị Đã Được Thay Đổi Và Khóa." // Thông báo khi thay đổi thành công và khóa giá trị
+		);
+	}
 
+	function modifyValue7(searchValue, replaceValue, addressEndsWith, addressEndsWith2, alertMessage) {
+		h5gg.clearResults();
+		h5gg.searchNumber(searchValue, 'F32', '0x100000000', '0x160000000');
+		const results = h5gg.getResults(h5gg.getResultsCount());
+		let modifiedCount = 0;
+
+		// Tạo một danh sách để lưu trữ các địa chỉ cần khóa
+		const lockAddresses = [];
+
+		results.forEach(result => {
+			if (result.address.endsWith(addressEndsWith) || (addressEndsWith2 && result.address.endsWith(addressEndsWith2))) {
+				h5gg.setValue(result.address, replaceValue.toString(), 'F32');
+				modifiedCount++;
+				lockAddresses.push(result.address); // Lưu địa chỉ cần khóa
+			}
+		});
+
+		if (modifiedCount > 0 && alertMessage) {
+			alert(alertMessage);
+
+			// Khóa giá trị sau khi thay đổi
+			const locker = setInterval(function () {
+				console.log("Kiểm Tra Và Khóa Giá Trị...");
+				lockAddresses.forEach(address => {
+					const currentValue = h5gg.getValue(address, 'F32');
+					if (currentValue !== replaceValue) { // Chỉ cập nhật nếu giá trị đã thay đổi
+						h5gg.setValue(address, replaceValue.toString(), 'F32');
+					}
+				});
+			}, 2000); // Kiểm tra và cập nhật mỗi 2 giây (giảm tần suất lặp)
+
+			// Hủy bỏ khóa: clearInterval(locker); có thể gọi khi cần thiết
+		} else if (alertMessage) {
+			alert("Không Tìm Thấy Kết Quả Phù Hợp Để Thay Đổi.");
+		}
+	}
 
 
 
