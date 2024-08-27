@@ -208,7 +208,6 @@ h5gg.require(7.9);
 
 
 
-
        function so90() { // ăng teng vai
 	       
        h5gg.clearResults();
@@ -416,7 +415,43 @@ function long3() { // magic
 	}
 
 
-  function long2() { // ăng teng vai
+ 
+
+function long2() { // ăng teng tay
+    h5gg.clearResults();
+    h5gg.searchNumber('1051196712', 'I64', '0x100000000', '0x160000000');
+    var count = h5gg.getResultsCount();
+    var r = h5gg.getResults(count);
+    var cnt = 0;
+    for (var i = 0; i < count; i++) {
+        var addr1 = r[i].address;
+
+        var dizhi0 = (Number(addr1) + 20);
+
+
+
+
+        {
+            h5gg.setValue(dizhi0, 200, "F32");
+        }
+    }
+    h5gg.clearResults();
+    h5gg.searchNumber('4575657224610966592', 'I64', '0x100000000', '0x160000000');
+    h5gg.editAll('4848125002066881600', 'I64');
+    ({
+        type: 'success',
+        message: '超細手線'
+    });
+
+
+}
+
+
+
+
+// menu quân hà 
+
+ function c1() { // ăng teng vai
 	       
        h5gg.clearResults();
        h5gg.searchNumber('4575657222469899220', 'I64', '0x100000000', '0x160000000');
@@ -429,3 +464,18 @@ function long3() { // magic
         message: '肩膀天線'
        });
        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
