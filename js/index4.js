@@ -1,5 +1,6 @@
- <script> 
-        let _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+// Cuong is me
+// đụ mẹ crack menu e chi rứa
+       let _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
                 const appConfig = {
                     // 接口地址
                     uri: "http://www.wigyyds.com/api/loginJavaScript",
