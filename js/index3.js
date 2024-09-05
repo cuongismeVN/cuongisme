@@ -1,132 +1,72 @@
-// Cuong is me
-// đụ mẹ crack menu e chi rứa
-// pass và link vượt, đuôi menu
+
+// cuong is me
+// đừng crack menu em huhu
+// chức năng menu
 
 
-// Cuong is me
-// đụ mẹ crack menu e chi rứa
-// pass 
+h5gg.require(7.9); 
+var h5frida=h5gg.loadPlugin("h5frida", "h5frida-16.0.10.dylib");
+function ActiveCodePatch(fpath, vaddr, bytes) {
+if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes); alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+    } return true;
+	}
+  function DeactiveCodePatch(fpath, vaddr, bytes) {
+    return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+	}
 
-      var app = new Vue({
+// thêm <i></i> để nghiêng chữ
+// chức năng ở đâu
 
-			el: "#app",
-			data() {
-				return {
-					ifshow: true,
-					checked: false,
-					radio: '1',
-					activeSelect: '',
-					selectOption: [{
-						value: 'Option1',//实际内容
-						label: 'golden'//显示文案
-					}, {
-						value: 'Option2',
-						label: 'eggs'
-					}],
-					input: "",
-					showOption: false,
-					tabValue: "one",
-				}
-			},
-			mounted() {
-				this.setRect(360, 320);
 
-				//设置不可拖动
-				setWindowRect("calc(50% - 180px)", "calc(50% - 160px)", 360, 320);
 
-				var layout = function () {
-					//window.orientation是设备握持方向, 不是屏幕显示方向
-					if (window.lastorientation == window.orientation) return;
-					window.lastorientation = window.orientation;
+function so01() { // tìm speed
+    h5gg.clearResults();
+    h5gg.searchNumber('4397530849764387586', 'I64', '0x100000000', '0x200000000');
+    alert('搜索(' + h5gg.getResultsCount() + '/1)');
+}
 
-					//window.screen中的宽高不会随着屏幕旋转更新(只会在初始化的时候固定)
-					if (Math.abs(window.orientation) == 90) {
-						//横屏模式
-						setWindowRect(0, 0, window.screen.height, window.screen.width);
-					} else {
-						//竖屏模式
-						setWindowRect(0, 0, window.screen.width, window.screen.height);
-					}
-				}
 
-				layout(); //设置旋转屏幕时自动调整布局和画布
-				window.addEventListener("orientationchange", layout, false);
+function so03() { // xóa speed
+    h5gg.editAll('4397530849764387586', 'I64');
+    ({
+        type: 'success',
+        message: '還原'
+    });
 
-				setButtonAction(function () {
-					var menu = document.querySelector("#app");
-					if (menu.style.display == 'none') {
-						menu.style.display = 'block';
-						//显示菜单之后, 设置触控不可穿透悬浮窗口
-						setWindowTouch(true);
+}
 
-					} else {
-						menu.style.display = 'none';
-						//隐藏菜单之后, 设置触控穿透悬浮窗口
-						setWindowTouch(false);
-					}
-				});
-			},
-			methods: {
-				setRect(w, h, x = -1, y = -1) {
-					var boxW = w;
-					var boxH = h;
 
-					var ayMenu = this.$refs.menuMain;
-					ayMenu.style.width = `${boxW}px`;
-					ayMenu.style.height = `${boxH}px`;
-					if (x == -1) ayMenu.style.left = `calc(50% - ${boxW / 2}px)`;
-					if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
-				},
-				changeTab(v) {
-					this.tabValue = v;
-				},
-				closeimgui() {
-					var menu = document.querySelector("#app");
-					menu.style.display = 'none';
-					setWindowTouch(false);
-				}
+function so06() {
+    h5gg.editAll('4397530849758414897', 'I64');
+    ({
+        type: 'success',
+        message: '2x'
+    });
 
-			},
-			data: {
-				showCustomPrompt: true, // Bắt đầu hiển thị hộp thoại nhập key
-				isKeyValid: false,
-				inputKey: '',
-				tabValue: 'one',
-				ifshow: true
-			},
-			methods: {
-				confirmKey() {
-					const validKey = '2468';  // thay key menu ở đây
-					if (this.inputKey === validKey) {
-						this.isKeyValid = true;
-						this.showCustomPrompt = false; // Ẩn hộp thoại khi nhập đúng key
-					} else {
-						alert("key không hợp lệ, vui lòng thử lại!");
-					}
-				},
-				copyLink() {
-                const url = 'https://yeumoney.com/zzfui1M'; // Thay URL bằng địa chỉ bạn muốn sao chép
+}
 
-                // Tạo một phần tử textarea tạm thời
-                const textarea = document.createElement('textarea');
-                textarea.value = url;
-                document.body.appendChild(textarea);
+function so02() {
+    h5gg.editAll('4397530849749489418', 'I64');
 
-                // Chọn nội dung của textarea và sao chép
-                textarea.select();
-                document.execCommand('copy');
+    ({
+        type: 'success',
+        message: '10x'
+    });
 
-                // Xóa phần tử textarea
-                document.body.removeChild(textarea);
+}
 
-                // Thông báo sao chép thành công
-                alert('liên kết đã được sao chép, xóa tab game vào safari dán link để get key');
-            },
-				changeTab(tab) {
-					this.tabValue = tab;
-				},
-				closeimgui() {
-					this.ifshow = false;
-				}
-			}
-		});
+
+function so05() {
+    h5gg.editAll('4397530849741637681', 'I64');
+     ({
+        type: 'success',
+        message: '50x'
+    });
+
+}
+
+
+
+
+
