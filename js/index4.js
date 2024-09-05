@@ -91,7 +91,7 @@
 			},
 			methods: {
 				confirmKey() {
-					const validKey = 'helloconcac';  // thay key menu ở đây
+					const validKey = '2468';  // thay key menu ở đây
 					if (this.inputKey === validKey) {
 						this.isKeyValid = true;
 						this.showCustomPrompt = false; // Ẩn hộp thoại khi nhập đúng key
