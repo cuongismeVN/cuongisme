@@ -1,6 +1,7 @@
 // backroud menu by cuong is me
 
 
+			<style>
 		* {
 			padding: 0;
 			margin: 0;
@@ -368,3 +369,408 @@
           document.oncontextmenu = defeatIE;
       }
       document.oncontextmenu = new Function("return false")
+		</script>
+  <script>
+		h5gg.require(7.9); 
+var h5frida=h5gg.loadPlugin("h5frida", "h5frida-16.0.10.dylib");
+if(!h5frida) throw "Failed to load h5frida plugin";
+function ActiveCodePatch(fpath, vaddr, bytes) {
+    if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+			var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+    } return true;
+	}
+  function DeactiveCodePatch(fpath, vaddr, bytes) {
+    return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+	}
+	
+	function hackmap(input)
+{
+ var hackmap = document.getElementById('hackmap');
+    if (hackmap.checked) {
+		ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x517D0F8, "360080D2");  
+          ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C15CDC, "1F2003D5");  
+          ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C15D80, "33008052");
+
+}
+else {
+
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x517D0F8, "360080D2");  
+          DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C15CDC, "1F2003D5");  
+          DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C15D80, "33008052");
+		
+				}}
+	
+function aimbot2(input)
+{
+ var aimbot2 = document.getElementById('aimbot2');
+    if (aimbot2.checked) {
+			ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x2F3F224, "E303271EC0035FD6");    
+h5gg.searchNumber(2500, "U32","0x100000000","0x160000000");
+            h5gg.searchNearby(0, "U32","0x50");
+            h5gg.searchNearby(25000, "U32","0x50");
+            h5gg.searchNumber(0, "U32","0x100000000","0x160000000");
+            h5gg.editAll(25000, "U32");
+            h5gg.clearResults();
+}
+else {
+
+	DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x2F3F224, "E303271EC0035FD6");    
+	
+}}
+
+function aimbot3(input)
+{
+ var aimbot3 = document.getElementById('aimbot3');
+    if (aimbot3.checked) {
+			ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x2F3F224, "E303271EC0035FD6");    
+          ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x57AC0F4, "E3008052C0035FD6");
+h5gg.searchNumber(2500, "U32","0x100000000","0x160000000");
+            h5gg.searchNearby(0, "U32","0x50");
+            h5gg.searchNearby(25000, "U32","0x50");
+            h5gg.searchNumber(0, "U32","0x100000000","0x160000000");
+            h5gg.editAll(25000, "U32");
+            h5gg.clearResults();
+}
+else {
+
+	DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x2F3F224, "E303271EC0035FD6");    
+	DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x57AC0F4, "E3008052C0035FD6");
+}}
+function rank(input)
+{
+ var rank = document.getElementById('rank');
+    if (rank.checked) {
+		
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5CDB8EC, "1F2003D5"); 
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5A296F0, "00008052C0035FD6");
+}
+else {
+
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5CDB8EC, "1F2003D5"); 
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5A296F0, "00008052C0035FD6");
+}}
+
+
+function history(input)
+{
+ var history = document.getElementById('history');
+    if (history.checked) {
+		
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5A4EEF0, "20008052C0035FD6"); 
+
+}
+else {
+
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5A4EEF0, "20008052C0035FD6"); 
+
+}}
+
+function help(input)
+{
+ var help = document.getElementById('help');
+    if (help.checked) {
+		
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5DAF168, "1F2003D5"); 
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C1FDBC, "370080D2"); 
+}
+else {
+
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5DAF168, "1F2003D5"); 
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C1FDBC, "370080D2"); 
+}}
+
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x517D0F8, "360080D2");  
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C15CDC, "1F2003D5");  
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C15D80, "33008052");
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5DAF168, "1F2003D5"); 
+
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5A4EEF0, "20008052C0035FD6"); 
+
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C1FDBC, "370080D2"); 
+
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5A296F0, "00008052C0035FD6");
+
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5CDB8EC, "1F2003D5"); 
+
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x5C518EC, "20008052C0035FD6");
+					
+function autowin(_0x30116a) {
+  var _0x256bc8 = document.getElementById('autowin')
+  _0x256bc8.checked
+    ? ActiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        86176008,
+        '200080D2C0031FD6'
+      )
+    : DeactiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        86176008,
+        '200080D2C0031FD6'
+      )
+}
+function onehit(_0x5bf1ff) {
+  var _0x3b5211 = document.getElementById('onehit')
+  _0x3b5211.checked
+    ? ActiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        84720296,
+        'C0035FD6'
+      )
+    : DeactiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        84720296,
+        'C0035FD6'
+      )
+}
+function buffvang(_0x5a1a09) {
+  var _0x5ccb29 = document.getElementById('buffvang')
+  _0x5ccb29.checked
+    ? ActiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        86186464,
+        'C0035FD6'
+      )
+    : DeactiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        86186464,
+        'C0035FD6'
+      )
+}
+function cooldown(_0x476226) {
+  var _0x58f1ff = document.getElementById('cooldown')
+  _0x58f1ff.checked
+    ? ActiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        85987760,
+        'C0035FD6'
+      )
+    : DeactiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        85987760,
+        'C0035FD6'
+      )
+}
+function testskin(_0x47e503) {
+  var _0x3bd151 = document.getElementById('testskin')
+  _0x3bd151.checked
+    ? ActiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        93799680,
+        'C0031FD6'
+      )
+    : DeactiveCodePatch(
+        'Frameworks/UnityFramework.framework/UnityFramework',
+        93799680, 'C0031FD6'
+      )
+}
+
+	</script>
+<body>
+	<div id="app">
+		<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+			<div class="aytitle">
+			<i :class="ifshow ? 'el-icon-caret-bottom' : 'el-icon-caret-top'" @click.prevent=""></i>
+			
+				<span class="title-age" style="margin-left:20px; color:#f0f0f0;">Menu AOV</span>
+				<i class="titleClose el-icon el-icon-close" @click="closeimgui"></i>
+			</div>
+			<div class="aybody">
+				<div class="aytab">
+					<span @click="changeTab('one')"
+						:style="{background:tabValue==='one'?'#444444':'	#111111'}">Main</span>
+					<span @click="changeTab('two')"
+						:style="{background:tabValue==='two'?'#444444':'	#111111'}">Extra</span>
+								<span @click="changeTab('three')"
+								:style="{background:tabValue==='three'?'#444444':'	#111111'}">Aimbot</span>
+									<span @click="changeTab('four')"
+									:style="{background:tabValue==='four'?'#444444':'	#111111'}">Info</span>
+				</div>
+				<strong>
+				<div v-show="tabValue==='one'">
+					<div class="aytext">
+						<p>Bật Ở Sảnh (Tự Động Bật Khi Mở Menu) </p></color>
+					</div>
+     <div class="checkbox-wrapper-24">
+			 <div>
+    <input type="checkbox" id="hackmap" name="hackmap" onclick="hackmap(this)" checked="checked">
+    <label for="hackmap">
+        <span></span>Hack Map
+    </label>
+	</div>
+															<div><input type="checkbox" id="history" onclick="history(this)" checked="checked">
+                                  <label for="history">
+                                    <span></span>Hiện LSĐ
+                                  </label></div>
+																	      <div><input type="checkbox" id="rank" onclick="rank(this)" checked="checked">
+                                  <label for="rank">
+                                    <span></span>Hiện Rank
+                                  </label></div>
+																	
+															 <div><input type="checkbox" id="help" onclick="help(this)" checked="checked">
+                                  <label for="help">
+                                    <span></span>Hiện Time Bổ Trợ
+                                  </label></div>		
+																	
+															</div>		
+					
+					<br>
+					<br>
+
+					
+
+					
+				</div>
+
+				<div v-show="tabValue === 'two'">
+					<div class="aytext">
+						<p>Chỉ Có Tác Dụng Với Máy</p>
+				
+					</div>
+
+		   <div class="checkbox-wrapper-24">
+			     <div><input type="checkbox" id="autowin" name="check" onclick="autowin(this)">
+                          <label for="autowin">
+                            <span></span>Autowin (Bật ở sảnh)
+                          </label></div>
+                    		   		   <div><input type="checkbox" id="onehit" name="check" onclick="onehit(this)">
+                          <label for="onehit">
+                            <span></span>OneHit
+                          </label></div>
+												
+													<div><input type="checkbox" id="buffvang" name="check" onclick="buffvang(this)">
+                          <label for="buffvang">
+                            <span></span>Buff Vàng
+                          </label></div>
+													
+													<div><input type="checkbox" id="cooldown" name="check" onclick="cooldown(this)">
+                          <label for="cooldown">
+                            <span></span>Hủy Hồi Chiêu
+                          </label></div>
+                 
+                      <div><input type="checkbox" id="testskin" name="testskin" onclick="testskin(this)">
+                          <label for="testskin">
+                            <span></span>Test Skin (Đấu Luyện)
+                          </label></div>
+											</div>
+				</div>
+					<div v-show="tabValue === 'three'">
+					<div class="aytext">
+						<p>Sau Khi Bật Sẽ Văng Game Khi Hết Trận</p></div>
+				     <div class="checkbox-wrapper-24">
+														
+													
+                              <div><input type="checkbox" id="aimbot2" onclick="aimbot2(this)">
+                                  <label for="aimbot2">
+                                    <span></span>Aim Giữ
+                                  </label></div>
+                              <div><input type="checkbox" id="aimbot3" onclick="aimbot3(this)">
+                                  <label for="aimbot3">
+                                    <span></span>Aim Xoay
+                                  </label></div>        
+																</div></div>
+					<div v-show="tabValue === 'four'">
+					<div class="aytext">
+						<p>Đọc Kĩ Trước Khi Chơi:</p></div>					              <div style="margin-left: 5px; margin-top:0">
+         <p class="m1txt">Mở Menu Để Bật Antiban.</p>
+               
+                  <p class="m1txt">Các Chức Năng Thường Dùng Sẽ Được Bật Sau Khi Mở Menu.</p>
+               <p class="m1txt">Bật Bypass Xong Trận Sẽ Tự Load Ra Sảnh.</p>
+                  <p class="m1txt">Sau Khi Bật Aim Xong Trận Sẽ Bị Văng.</p>
+                  <p class="m1txt">Không Chat Khoe Hack, Không Ping Bụi.</p>
+								 <p class="m1txt">Test Skin Chỉ Dùng Trong Đấu Luyện:<br>Vào Đấu Luyện Bật Test Skin Sau Đó Nhấn Đổi Tướng Và Chọn Skin Để Trải Nghiệm.</p>
+						<br>
+                  <b class="m1txt"><i> CONTACT ME ON:
+                  </i></b>
+									  <p class="m1txt">Telegram: ShinAOV</p>
+										  <p class="m1txt">Discord: shin999.exe</p>
+										</div> 			
+										
+	
+		</div>
+		</div>
+			<div class="vip">VIP</div>
+		</div>		
+	</div>
+</strong>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data() {
+				return {
+					ifshow: true,
+					checked: false,
+					radio: '1',
+					activeSelect: '',
+					selectOption: [{
+						value: 'Option1',//实际内容
+						label: 'golden'//显示文案
+					}, {
+						value: 'Option2',
+						label: 'eggs'
+					}],
+					input: "",
+					showOption: false,
+					tabValue: "one",
+				}
+			},
+			mounted() {
+				this.setRect(360, 320);
+
+				//设置不可拖动
+				setWindowRect("calc(50% - 180px)", "calc(50% - 160px)", 360, 320);
+    
+				var layout = function()
+				{
+					//window.orientation是设备握持方向, 不是屏幕显示方向
+					if(window.lastorientation==window.orientation) return;
+					window.lastorientation=window.orientation;
+				
+					//window.screen中的宽高不会随着屏幕旋转更新(只会在初始化的时候固定)
+					if(Math.abs(window.orientation)==90) {
+						//横屏模式
+						setWindowRect(0,0,window.screen.height,window.screen.width);
+					} else {
+						//竖屏模式
+						setWindowRect(0,0,window.screen.width,window.screen.height);
+					}
+				}
+	
+				layout(); //设置旋转屏幕时自动调整布局和画布
+				window.addEventListener("orientationchange", layout, false);
+
+				setButtonAction(function () {
+					var menu = document.querySelector("#app");
+					if (menu.style.display == 'none') {
+						menu.style.display = 'block';
+						//显示菜单之后, 设置触控不可穿透悬浮窗口
+						setWindowTouch(true);
+			
+					} else {
+						menu.style.display = 'none';
+						//隐藏菜单之后, 设置触控穿透悬浮窗口
+						setWindowTouch(false);
+					}
+				});
+			},
+			methods: {
+				setRect(w, h, x = -1, y = -1) {
+					var boxW = w;
+					var boxH = h;
+
+					var ayMenu = this.$refs.menuMain;
+					ayMenu.style.width = `${boxW}px`;
+					ayMenu.style.height = `${boxH}px`;
+					if (x == -1) ayMenu.style.left = `calc(50% - ${boxW / 2}px)`;
+					if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
+				},
+				changeTab(v) {
+					this.tabValue = v;
+				},
+				closeimgui() {
+					var menu = document.querySelector("#app");
+					menu.style.display = 'none';
+					setWindowTouch(false);
+				}
+			}
+		});
