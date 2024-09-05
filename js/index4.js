@@ -1,6 +1,6 @@
 // Cuong is me
 // đụ mẹ crack menu e chi rứa
-
+// pass 
 
       var app = new Vue({
 
@@ -83,28 +83,45 @@
 
 			},
 			data: {
-				ifshow: true,
+				showCustomPrompt: true, // Bắt đầu hiển thị hộp thoại nhập key
+				isKeyValid: false,
+				inputKey: '',
 				tabValue: 'one',
-				isKeyValid: false
+				ifshow: true
 			},
 			methods: {
-				checkKey() {
-					const inputKey = prompt("Lay key tren bio: https://linkbio.co/congtaosea");
-					if (inputKey === 'hellobonlon') {
+				confirmKey() {
+					const validKey = 'helloconcac';  // Thay thế bằng key hợp lệ
+					if (this.inputKey === validKey) {
 						this.isKeyValid = true;
+						this.showCustomPrompt = false; // Ẩn hộp thoại khi nhập đúng key
 					} else {
-						alert("Key sai.");
-						this.checkKey();
+						alert("key không hợp lệ, vui lòng thử lại!");
 					}
 				},
+				copyLink() {
+                const url = 'https://example.com'; // Thay URL bằng địa chỉ bạn muốn sao chép
+
+                // Tạo một phần tử textarea tạm thời
+                const textarea = document.createElement('textarea');
+                textarea.value = url;
+                document.body.appendChild(textarea);
+
+                // Chọn nội dung của textarea và sao chép
+                textarea.select();
+                document.execCommand('copy');
+
+                // Xóa phần tử textarea
+                document.body.removeChild(textarea);
+
+                // Thông báo sao chép thành công
+                alert('liên kết đã được sao chép, xóa tab game vào safari dán link để get key');
+            },
 				changeTab(tab) {
 					this.tabValue = tab;
 				},
 				closeimgui() {
 					this.ifshow = false;
 				}
-			},
-			mounted() {
-				this.checkKey();
 			}
 		});
