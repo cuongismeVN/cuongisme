@@ -94,7 +94,7 @@
 			},
 			methods: {
 				confirmKey() {
-					const validKey = '777';  // thay key menu ở đây
+					const validKey = '7777';  // thay key menu ở đây
 					if (this.inputKey === validKey) {
 						this.isKeyValid = true;
 						this.showCustomPrompt = false; // Ẩn hộp thoại khi nhập đúng key
