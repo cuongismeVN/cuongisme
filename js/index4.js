@@ -1,4 +1,4 @@
-// cuongisme 
+// cuongisme FF.v3.TrollFools
 // tuổi lồn crack
 // pass, link đuôi menu
 
